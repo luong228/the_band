@@ -1,0 +1,520 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    box-sizing: border-box;
+	font: inherit;
+	vertical-align: baseline;
+}
+h1 h2 h3 h4 h5 h6 {
+    font-weight: 400;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.5;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+span {
+	border: 1px solid yellow;
+	border-inline: inherit;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+th,
+td {
+  border: 1px solid #000000;
+  padding: 10px 15px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Common */
+.text-white {
+    color: #fff !important;
+}
+.clear { 
+    clear: both;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.border {
+    border: 1px solid #ccc!important;
+}
+
+.row {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-3 {
+    width: 33.3333%;
+}
+
+.btn {
+    background-color: #000;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000!important;
+    background-color: #ccc!important;
+}
+
+/* Main */
+#main {
+
+}
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+    z-index: 10;
+}
+#nav {
+    display: inline-block;
+}
+#nav > li {
+    display: inline-block;
+    position: relative;
+}
+#nav > li > a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#nav li a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0px 25px;
+    font-size: 20px;
+    color: #fff;
+    display: inline-block;
+    margin: 0px 10px;
+}
+#nav li:hover .subnav {
+    display: inline-block;
+}
+#nav li:hover a, #nav .subnav li:hover a {
+    background-color: rgb(240, 233, 233);
+    color: #000000;
+
+}
+#nav .subnav {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    top: 100%;
+    left: 0%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+#nav .subnav li a {
+    background-color: #fff;
+    color: #000000;
+    display: block;
+}
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+}
+#header .search-bt:hover {
+    background-color: red;
+    cursor: pointer;
+}
+#header .search-bt {
+    padding: 0 21px;
+    float: right;
+}
+#slider-container {
+    width: 100%;
+    padding-top: 50%;
+    margin-top: 50px;
+    position: relative;
+    background: url("/assets/img/la.jpg") top center / cover no-repeat; 
+}
+#slider-container .text-content {
+    bottom: 0px;
+    padding: 32px 16px;
+    position: absolute;
+    color: white;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    /* left : 0%;
+    right: 0%;
+    or 
+    width: 100%; */
+}
+#slider-container .text-heading {
+    margin-bottom: 25px;
+}
+#slider-container .text-description {
+
+}
+/*slider-image*/
+#slider-container #LA {
+    background: url("/assets/img/la.jpg") top center / cover no-repeat;
+}
+
+#slider-container #NY {
+    display:  none;
+    background: url(/Test1_F8/assets/img/ny.jpg) top center / cover no-repeat;
+}
+
+#slider-container #CHICAGO {
+    display:none;
+    background: url(/Test1_F8/assets/img/chicago.jpg) top center / cover no-repeat;
+}
+#content {
+    
+}
+#content .content-section {
+    max-width: 800px;
+    padding: 64px 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .section-heading {
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin: 10px 0px
+    vertical-align: super;
+    text-align: center;
+}
+#content .section-sub-heading {
+    font-size: 15px;
+    margin: 15px 0px;
+    opacity: 0.6;
+    text-align: center;
+}
+#content #about-text {
+    margin: 15px 0px;
+    text-align: justify;
+}
+
+#content .member-lists {
+    margin-top: 32px;
+    overflow: hidden;
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin: 15px 0px;
+}
+#content .member-image {
+    width: 153px;
+    border-radius: 4px;
+}
+/* Tour Section */
+.tour-section {
+    background-color: #000000;
+}
+
+.ticket-list {
+    background-color: white;
+    list-style: none;
+}
+
+.ticket-list .sold-out {
+    padding: 3px 4px;
+    margin-left: 16px;
+    background-color: #f44336;
+    color:  #fff;
+}
+
+.ticket-list li {
+    font-size: 15px;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.ticket-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+}
+/* Tour Place */
+.place-lists {
+    padding: 32px 8px;
+}
+
+.place-item {
+    margin-bottom: 16px;
+}
+
+.place-img {
+    width: 100%;
+    display:block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    padding: 16px;
+    font-size: 15px;
+    background-color: #fff;
+    color:#000;
+}
+
+.place-heading {
+    margin: 0px 0px;
+}
+
+.place-time {
+    margin: 15px 0px;
+    opacity: 0.6;
+    text-align: left;
+    color: #757575;
+}
+
+.place-desc {
+    margin: 15px 0px;
+}
+
+
+
+/* Footer Section */
+#footer {
+
+}
+/* modal Buy Tickets */
+.modal {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.4s;
+}
+.modal-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    padding: 8px 16px;
+    color:#fff;
+}
+
+.modal-close:hover {
+    color: #000!important;
+    background-color: #ccc!important;
+}
+
+header.modal-header {
+    color: #fff;
+    height: 130px;
+    background-color: #009688;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.modal-label {
+    display:block;
+    font-size: 15px;
+    margin: 15px 0px;
+}
+
+.modal-body {
+   display: block;
+   padding: 0.01em 16px;
+}
+.modal-input {
+    display:block;
+    width: 100%;
+    font-size: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+#buy-tickets {
+    background-color: #009688;
+    border:none;
+    width:100%;
+    font-size:15px;
+    text-transform: uppercase;
+    padding: 14px;
+    color: #Fff;
+}
+
+#buy-tickets:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.modal-footer {
+    padding: 16px;
+    text-align: right;
+}
+
+.modal-footer a {
+    color: #2196F3;
+}
+.modal.open {
+    display: flex;
+}
+
+/* CONTACT-SECTION */
+.contact-section {
+    background-color: #fff;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-form {
+   font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 9px;
+    width: 100%;
+}
+
+.contact-container {
+    padding: 32px 0;
+}
+
+.form-submit-btn {
+    float: right;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+}
+
+.form-submit-btn:hover {
+    background-color:#ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.contact-info i[class*="fas"] {
+    width:30px;
+    display:inline-block;
+}
+
+.map-section img {
+    width: 100%;
+}
+
+footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+footer .social-list {
+    font-size:22px;
+}
+
+footer .social-list a, footer .copyright {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+footer .social-list a:hover {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+footer .copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
