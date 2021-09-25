@@ -220,7 +220,7 @@ html {
 }
 /*slider-image*/
 #slider-container #LA {
-    background: url("/assets/img/la.jpg") top center / cover no-repeat;
+    background: url("assets/img/la.jpg") top center / cover no-repeat;
 }
 
 #slider-container #NY {
