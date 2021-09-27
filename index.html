@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="icon" href="/assets/img/iconfb.png">
     <script src="https://kit.fontawesome.com/c2bdfb3c2d.js" crossorigin="anonymous">
     </script>
@@ -17,7 +18,7 @@
         <div id="header">
             <ul id="nav">
                 <li>
-                    <a href="#">Ho1me</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
                     <a href="#band">Band</a>
@@ -39,6 +40,9 @@
             </ul>
             <div class="search-bt">
                 <i class="search-icon fas fa-search"></i>
+            </div>
+            <div id="mobile-menu" class="menu-mobile-bt">
+                <i class="menu-icon fas fa-bars"></i>
             </div>
         </div>
         <div id="slider-container">
@@ -192,7 +196,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col col-full">
+                                    <div class="col col-full mt-8">
                                         <input type="text" name="" placeholder="Message" id="Message" required class="form-control border">
                                     </div>
                                 </div>
@@ -250,6 +254,10 @@
         </div>
     </div>
     <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
@@ -264,10 +272,31 @@
             buyBtn.addEventListener('click', showBuyTickets)
         }
         modalClose.addEventListener('click', closeBuyTickets)
+
         modal.addEventListener('click', closeBuyTickets)
+
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+        // Auto Open/Close Menu Bar
+        mobileMenu.addEventListener('click', function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            }
+            else {
+                header.style.height = null;
+            }
+        })
+        
+        // Close Bar Menu When Click Anchor
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.addEventListener('click', function() {
+                header.style.height = null;
+            })
+        }
     </script>
 </body>
 
