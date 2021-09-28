@@ -98,19 +98,19 @@
                     consequat.
                 </p>
                 <div class="row member-lists">
-                    <div class="col col-3 text-center">
+                    <div class="col col-3 text-center col-full">
                         <div class="member-name">
                             <p>Name</p>
                         </div>
                         <img src="assets/img/bandmember.jpg" alt="band member" class="member-image">
                     </div>
-                    <div class="col col-3 text-center">
+                    <div class="col col-3 text-center col-full">
                         <div class="member-name">
                             <p>Name</p>
                         </div>
                         <img src="assets/img/bandmember.jpg" alt="band member" class="member-image">
                     </div>
-                    <div class="col col-3 text-center">
+                    <div class="col col-3 text-center col-full">
                         <div class="member-name">
                             <p>Name</p>
                         </div>
@@ -145,7 +145,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-3 place-item">
@@ -154,7 +154,7 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="col col-3 place-item">
@@ -163,7 +163,7 @@
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" class="btn js-buy-ticket">Buy Tickets</button>
+                                <button href="#" class="btn js-buy-ticket s-full-width">Buy Tickets</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -180,18 +180,18 @@
                         <i>Fan? Drop a note!</i>
                     </p>
                     <div class="row contact-container">
-                        <div class="col col-2 contact-info">
+                        <div class="col col-2 contact-info col-full">
                             <p><i class="fas fa-map-marker-alt"></i>Chicago, US</p>
                             <p><i class="fas fa-phone-alt"></i>Phone: +00 151515</p>
                             <p><i class="fas fa-envelope"></i>Email: mail@mail.com</p>
                         </div>
-                        <div class="col col-2 contact-form">
+                        <div class="col col-2 contact-form col-full">
                             <form action="/test.html">
                                 <div class="row">
-                                    <div class="col col-2">
+                                    <div class="col col-2 col-full">
                                         <input type="text" name="" placeholder="Name" id="Name" required class="form-control border">
                                     </div>
-                                    <div class="col col-2">
+                                    <div class="col col-2 col-full">
                                         <input type="email" name="" placeholder="Email" id="Email" required class="form-control border">
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@
                                         <input type="text" name="" placeholder="Message" id="Message" required class="form-control border">
                                     </div>
                                 </div>
-                                <input type="submit" value="SEND" class="btn mt-16 pull-right">
+                                <input type="submit" value="SEND" class="btn mt-16 pull-right s-full-width">
                             </form>
                         </div>
                     </div>
@@ -293,8 +293,15 @@
         var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
         for (var i = 0; i < menuItems.length; i++) {
             var menuItem = menuItems[i];
-            menuItem.addEventListener('click', function() {
-                header.style.height = null;
+
+            console.log(menuItem.nextElementSibling);
+            menuItem.addEventListener('click', function(event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if(!isParentMenu){
+                    header.style.height = null;
+                } else {
+                    event.preventDefault();
+                }
             })
         }
     </script>
