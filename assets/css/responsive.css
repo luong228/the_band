@@ -1,29 +1,82 @@
 /* PC */
 @media (min-width: 1024px) {
-    #header .menu-mobile-bt,
-    #header .menu-icon {
+    #header .menu-mobile-bt{
         display: none;
+    }
+}
+
+/* TABLET & MOBILE */
+@media (max-width: 1024px) {
+    .contact-form .form-control {
+        padding: 15px;
+    }
+    footer .social-list {
+        font-size: 30px;
+    }
+    footer .social-list a {
+        margin: 0 8px;
+    }
+    footer .copyright {
+        padding: 12px 0;
     }
 }
 /* TABLET */
 @media (min-width: 740px) and (max-width: 1024px) {
-    #header .menu-mobile-bt,
-    #header .menu-icon {
+    #header .menu-mobile-bt {
         display: none;
     }
+
 }
 /* MOBILE */
 @media (max-width: 740px) {
+
+    #nav {
+        display: block;
+    }
+
     #nav > li {
         display: block;
     }
+    
+    #nav .subnav {
+        position: initial;
+        padding: 5px 30px;
+
+    }
+
+    #nav .subnav li a {
+        background-color: #000;
+        color: #fff;
+    }
+
+    #nav > li > a {
+        display:block;
+        padding: 1px 20px
+    }
     #header {
+        
         overflow: hidden;
     }
+
     .search-bt {
         display: none;
     }
-    .menu-mobile-bt {
-       
+
+    #header .menu-mobile-bt {
+       display: block;
+    }
+    
+    #content .col-full,
+    .s-full-width {
+        width:100%;
+    }
+    #content .member-image {
+        width: 60%;
+    }
+    .place-item {
+        width: 100%;
+    }
+    .contact-form {
+        margin-top: 16px;
     }
 }
