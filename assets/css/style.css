@@ -80,8 +80,8 @@ html {
 }
 
 .row {
-    margin-left: -16px;
-    margin-right: -16px;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 .row::after {
@@ -145,6 +145,11 @@ html {
     display: inline-block;
     position: relative;
 }
+
+#nav > li:first-child {
+    display: inline-block;
+}
+
 #nav > li > a {
     text-transform: uppercase;
     font-weight: bold;
@@ -196,12 +201,22 @@ html {
     font-size: 20px;
     line-height: 50px;
 }
+
 #header .search-bt:hover {
     background-color: red;
     cursor: pointer;
 }
-#header .search-bt,
+
 #header .menu-mobile-bt {
+    position: absolute;
+    padding: 0 21px;
+    float: right;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .search-bt
+ {
     padding: 0 21px;
     float: right;
 }
